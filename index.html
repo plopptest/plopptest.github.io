@@ -6,13 +6,15 @@
 </svg>
 </div>
 <div id=y style="display:none;">
-<h1>:)</h1>
+<a href="http://steamcommunity.com/profiles/76561197999277357">plopp</a>
 </div>
 <audio autoplay hidden loop>
 <source src="music.mp3" type="audio/mp3">
 </audio>
 <span id="sent"></span>
 <style>
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 body{
 	background-color: black;
 	}
@@ -25,24 +27,46 @@ body{
 }
 
 #y{
+	font-family: 'Roboto', sans-serif;
 	color: white;
 	position: absolute;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
 }
+
+a:link {
+	color: white;
+	text-decoration: none;
+}
+
+a:visited {
+	color: white;
+	text-decoration: none;
+}
+
+a:hover {
+	color: grey;
+	text-decoration: none;
+}
+
+a:active {
+	color: white;
+	text-decoration: none;
+} 
 </style>
 
 <script type="text/javascript">
+document.body.style.cursor = 'none';
 if ( window.addEventListener ) {  
   var state = 0, code = [80,76,79,80,80];  
   window.addEventListener("keydown", function(e) {  
     if ( e.keyCode == code[state] ) state++;  
     else state = 0;  
-    if ( state == 5 )  
-      $("#y").fadeIn();
+    if ( state == 5 )
+		$("#y").fadeIn();
+	if ( state == 5 )
+		document.body.style.cursor = 'auto';
     }, true);  
-}  
-document.body.style.cursor = 'none';
-document.addEventListener('contextmenu', event => event.preventDefault());
+}
 </script>
