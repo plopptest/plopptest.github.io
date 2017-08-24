@@ -57,6 +57,7 @@ a:active {
 </style>
 
 <script type="text/javascript">
+document.addEventListener('contextmenu', event => event.preventDefault());
 document.body.style.cursor = 'none';
 if ( window.addEventListener ) {  
   var state = 0, code = [80,76,79,80,80];  
